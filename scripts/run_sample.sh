@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
-
 make all
 
 echo "== 1. Known answer tests =="
