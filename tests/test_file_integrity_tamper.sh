@@ -13,7 +13,6 @@ EXPECTED_HASH=$(./sha256 --hash-file "$TMP_FILE")
   echo "[FAIL] File integrity check should pass before tamper"
   exit 1
 }
-
 printf "tamper: sửa 1 byte / flip 1 byte\n" >> "$TMP_FILE"
 if ./file_integrity "$TMP_FILE" "$EXPECTED_HASH" >/dev/null; then
   echo "[FAIL] Tamper test should fail after file is changed"
@@ -21,3 +20,4 @@ if ./file_integrity "$TMP_FILE" "$EXPECTED_HASH" >/dev/null; then
 fi
 
 echo "[PASS] Tamper / flip 1 byte negative test passed."
+#Tri
